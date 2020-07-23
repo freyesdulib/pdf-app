@@ -1,0 +1,39 @@
+<% include partials/header %>
+
+<div class="stories-template">
+
+    <% include partials/nav %>
+
+    <div class="row">
+        <div class="col-md-5 col-md-offset-4">
+
+            <div class="panel panel-default">
+                <div class="panel-heading"><%=message%></div>
+                <div class="panel-body">
+
+                    <form name="loginForm" action="/login" method="post">
+                        <div class="form-group">
+                            <label class="sr-only" for="duid">DU ID</label>
+
+                            <input type="number" class="form-control" id="duid" name="username" value="<%=username%>" placeholder="DU ID" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="passcode">Passcode</label>
+
+                            <input type="password" class="form-control" id="passcode" name="password" value="" placeholder="Passcode" required>
+                        </div>
+                        <div class="form-group" style="display: none;">
+                            <label class="sr-only" for="number">Number</label>
+
+                            <input type="text" class="form-control" id="number" name="number" value="<%=number%>" placeholder="Number" required>
+                        </div>
+                        <button type="submit" class="btn btn-default"><i class="fa fa-sign-in"></i>&nbsp;Authenticate</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<% include partials/footer.ejs %>
